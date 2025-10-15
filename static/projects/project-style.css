@@ -1,0 +1,26 @@
+.project-data {
+    display: flex;
+    align-items: center;
+    gap: .25em;
+    margin-bottom: .5em;
+}
+
+.project-data .logo {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.project-data .title { font-size: 1.25em; font-weight: 600; }
+.project-images-list {
+    display: flex;
+    gap: .25em;
+    margin: 2em -1.5em;
+    padding: 0 1.5em;
+    overflow: auto;
+}
+.project-images-list img {
+    height: 10em;
+    border-radius: 1em;
+}

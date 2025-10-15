@@ -1,0 +1,82 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Company</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    
+    <header>
+        <div class="company-title">Company</div>
+        <i class="company-paragraph">Мы делаем цифровой мир проще и ближе</i>
+    </header>
+    
+    <main>
+        <br><br><br>
+        <div class="menu-text">
+            <div class="text-box">
+                <div class="i">•</div>
+                <i class="text">Создаём сайты, Telegram-ботов и другие IT-решения, которые помогают бизнесу расти и быть современным</i>
+            </div>
+            <div class="text-box">
+                <div class="i">•</div>
+                <i class="text">Каждый проект для нас - это шаг вперёд, внимание к деталям и стремление</i>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        
+        <div class="our-projects-text">Наш проекты</div>
+        <div class="our-projects">
+            {% for project in projects %}
+                <div class="project" onclick="location.assign('/projects/{{project.id}}/')">
+                    <div class="title">{{ project.title }}</div>
+                    <img src="{{ project.logo }}" alt="" class="logo">
+                </div>
+            {% endfor %}
+        </div>
+        
+        <br>
+        <br>
+        
+        <div class="our-teammates-text">Наш сотрудники</div>
+        <div class="our-teammates">
+            {% for teammate in teammates %}
+            <div class="teammate" onclick="location.assign('/teammate/{{teammate.id}}/')">
+                <div class="name">{{ teammate.first_name|upper}} {{ teammate.last_name|upper }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <br><br>
+        <p class="last-index-text">Company - надёжность, технологии и профессионализм</p>
+        <br>
+        
+        <div class="contact-us-container">
+            <div class="title">Сразяться с нами</div>
+            <div class="support-box" onclick="window.open('https://t.me/pirimbetov12')">
+                <i class="fa-brands fa-telegram"></i>
+                <div class="title">Telegram</div>
+            </div>
+            <div class="support-box" onclick="window.open('https://www.instagram.com/shaxcoder12')">
+                <i class="fa-brands fa-instagram"></i>
+                <div class="title">Instagram</div>
+            </div>
+        </div>
+    </main>
+    
+    <br><br>
+    
+    <footer>
+        <p class="text"> © 2025 Company. Все права защищены.  
+Связаться: info@company.com | Telegram: @company_support  
+Сделано с заботой о каждом проекте ❤️</p>
+    </footer>
+    
+</body>
+</html>

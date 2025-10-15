@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: "Zalando Sans", sans-serif;
+}
+
+:root {
+    --first-color: #1c1c1c;
+}
+
+body { background: black; color: white; }
+main { padding: 1.5em; }
+header { text-align: center; }
+header .company-title {
+    font-size: 4em;
+    font-weight: 680;
+}
+header .company-paragraph {
+    font-size: .9em;
+    font-weight: 650;
+}
+
+.menu-text {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid white;
+    padding: 0 1em;
+    gap: .75em;
+}
+
+.menu-text .text-box { display: flex; }
+.menu-text .text-box .i {
+    font-size: 1.5em;
+    padding-right: .5em;
+}
+
+.our-projects,
+.our-teammates {
+    display: flex;
+    overflow: auto;
+    gap: .5em;
+}
+
+.our-projects-text,
+.our-teammates-text {
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-bottom: .5em;
+}
+
+.our-projects .project,
+.our-teammates .teammate {
+    background: var(--first-color);
+    padding: 1em;
+    height: 125px;
+    flex: 0 0 10em;
+    border-radius: 1.5em;
+    transition: all .5s;
+}
+
+.our-projects .project .logo {
+    height: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.our-projects .project .title,
+.our-teammates .teammate .name{
+    font-size: 1.25em;
+    font-weight: 650;
+}
+
+.last-index-text {font-size: 2em; font-weight: 750; line-height: 0.9; }
+
+.contact-us-container {
+    background: var(--first-color);
+    padding: 1em;
+    border-radius: 1.5em;
+}
+
+.contact-us-container .title {
+    font-size: 1.5em;
+    font-weight: 650;
+    margin-bottom: .75em;
+}
+
+.support-box {
+    background: black;
+    padding: .75em;
+    border-radius: .5em;
+    margin-bottom: .25em;
+    display: flex;
+    align-items: center;
+    gap: .25em;
+}
+
+.support-box i {
+    font-size: 1.25em;
+}
+
+.support-box .title { font-size: 1em; margin-bottom: 0; }
+
+footer {
+    background: var(--first-color);
+    color: grey;
+    padding: 1.5em 1em;
+    text-align: center;
+}

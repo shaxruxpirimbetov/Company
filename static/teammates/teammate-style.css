@@ -1,0 +1,32 @@
+.user-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-data .username {
+    font-size: 3.5em;
+    font-weight: 650;
+    line-height: .9;
+}
+
+.user-data .user-stack {
+    width: 70%;
+}
+
+.user-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-links .link {
+    padding: .25em;
+    border-radius: .25em;
+    display: flex;
+    align-items: center;
+    gap: .25em;
+}
+
+.user-links .link i { font-size: 1.25em; }
+.user-links .link .title { font-size: 1.15em; }
+
+.user-photo { width: 100%; margin: 2em 0; }

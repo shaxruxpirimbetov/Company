@@ -1,0 +1,52 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teammate {{ teammate.first_name }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'teammates/teammate-style.css' %}">
+    
+</head>
+<body>
+    
+    <main>
+        <div class="user-data">
+            <div class="username">{{ teammate.last_name }}</div>
+            <div class="username">{{ teammate.first_name }}</div>
+            <div class="user-stack">{{ teammate.stack }}</div>
+        </div>
+        <div class="user-links">
+            <div class="link">
+                <i class="fa-brands fa-telegram"></i>
+                <div class="title">Telegram</div>
+            </div>
+            <div class="link">
+                <i class="fa-brands fa-instagram"></i>
+                <div class="title">Instagram</div>
+            </div>
+            <div class="link">
+                <i class="fa-brands fa-github"></i>
+                <div class="title">Github</div>
+            </div>
+        </div>
+        
+        <img src="{{ teammate.image }}" alt="" class="user-photo">
+        
+    </main>
+    
+    <br><br>
+    
+    <footer>
+        <p class="text"> © 2025 Company. Все права защищены.  
+Связаться: info@company.com | Telegram: @company_support  
+Сделано с заботой о каждом проекте ❤️</p>
+    </footer>
+    
+<script>
+    // setInterval(() => {location.reload()}, 600)
+</script>
+</body>
+</html>
