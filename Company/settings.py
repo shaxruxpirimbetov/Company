@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-0b!dfj1--kbejf*^42dm&hl!ovsmva#m&4$q=er42eh)81zakz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["shaxcoder.pythonanywhere.com"]
+ALLOWED_HOSTS = ["shaxrux.pythonanywhere.com"]
 # ALLOWED_HOSTS = []
 CORS_ALLOW_ALL_ORIGINS=False
 X_FRAME_OPTIONS = 'ALLOWALL'
@@ -142,7 +142,7 @@ MEDIA_ROOT = "/data/data/com.termux/files/home/media/"
 '''
 STATIC_URL = "/static/"
 MEDIA_URL = "/media/"
-STATIC_ROOT = BASE_DIR / "/static/"
+STATIC_ROOT = BASE_DIR / "/staticfiles/"
 MEDIA_ROOT = BASE_DIR / "/media/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
