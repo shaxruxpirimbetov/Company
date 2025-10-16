@@ -1,0 +1,41 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'user/register.css' %}">
+</head>
+<body>
+    <main>
+    
+    <div class="company-title">Company</div>
+    <br>
+    <form method="POST">
+        {% csrf_token %}
+        {{ error }}
+        <div class="form-title">Регистрация</div>
+        <div class="input-box">
+            <i class="fas fa-user"></i>
+            <input name="username" type="text" placeholder="Имя пользователя...">
+        </div>
+        <div class="input-box">
+            <i class="fas fa-lock"></i>
+            <input name="password" type="password" placeholder="Введите пароль...">
+        </div>
+        <div class="input-box">
+            <i class="fas fa-lock"></i>
+            <input name="password2" type="password" placeholder="Подтвердите пароль...">
+        </div>
+        <button id="submit">Регистрация</button>
+    </form>
+    
+    </main>
+<script>
+    // setInterval(() => {location.reload()}, 1000)
+</script>
+</body>
+</html>

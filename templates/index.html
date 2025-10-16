@@ -68,6 +68,30 @@
                 <div class="title">Instagram</div>
             </div>
         </div>
+        <br>
+        
+        {% if not request.user.username %}
+        <div class="contact-us-container">
+            <div class="title">Войдите чтобы быть с нами</div>
+            <div class="support-box" onclick="location.assign('user/register/')">
+                <i class="fas fa-sign-in-alt"></i>
+                <div class="title">Регистрация</div>
+            </div>
+            <div class="support-box" onclick="location.assign('user/login/')">
+                <i class="fas fa-sign-in-alt"></i>
+                <div class="title">Авторизация</div>
+            </div>
+        </div>
+        {% else %}
+        <div class="contact-us-container">
+            <div class="title">Выйти</div>
+            <div class="support-box" onclick="location.assign('user/logout/')">
+                <i class="fas fa-sign-out-alt"></i>
+                <div class="title">Выйти</div>
+            </div>
+        </div>
+        {% endif %}
+        
     </main>
     
     <br><br>
@@ -77,6 +101,6 @@
 Связаться: info@company.com | Telegram: @company_support  
 Сделано с заботой о каждом проекте ❤️</p>
     </footer>
-    
+
 </body>
 </html>

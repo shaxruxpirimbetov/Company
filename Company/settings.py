@@ -28,8 +28,8 @@ SECRET_KEY = "django-insecure-0b!dfj1--kbejf*^42dm&hl!ovsmva#m&4$q=er42eh)81zakz
 DEBUG = True
 
 ALLOWED_HOSTS = ["shaxcoder.pythonanywhere.com"]
-ALLOWED_HOSTS = []
-CORS_ALLOW_ALL_ORIGINS=True
+# ALLOWED_HOSTS = []
+CORS_ALLOW_ALL_ORIGINS=False
 X_FRAME_OPTIONS = 'ALLOWALL'
 AUTH_USER_MODEL = "user.User"
 
@@ -128,7 +128,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = "static/"
+'''
+STATIC_URL = "/static/"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
@@ -137,6 +138,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = "/data/data/com.termux/files/home/media/"
+
+'''
+STATIC_URL = "/static/"
+MEDIA_URL = "/media/"
+STATIC_ROOT = BASE_DIR / "/static/"
+MEDIA_ROOT = BASE_DIR / "/media/"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
