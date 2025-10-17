@@ -9,7 +9,7 @@ class Teammate(models.Model):
 	first_name = models.CharField(max_length=64)
 	last_name = models.CharField(max_length=64)
 	stack = models.CharField(max_length=64, default="New")
-	image = models.ImageField(upload_to="teammate_photos/")
+	image = models.ImageField(upload_to="teammate_photos/", null=True, blank=True)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 	
