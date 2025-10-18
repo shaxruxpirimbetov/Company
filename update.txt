@@ -4,5 +4,5 @@ cp -r CompanyOld/projects/migrations Company/projects
 cp -r CompanyOld/teammates/migrations Company/teammates
 cp -r CompanyOld/db.sqlite3 Company
 cp -r CompanyOld/media Company
-
-
+cd Company
+python manage.py collectstatic
