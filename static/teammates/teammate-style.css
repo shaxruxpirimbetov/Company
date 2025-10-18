@@ -30,3 +30,6 @@
 .user-links .link .title { font-size: 1.15em; }
 
 .user-photo { width: 100%; margin: 2em 0; }
+.empty-image {
+    margin: auto;
+}

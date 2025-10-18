@@ -1,0 +1,8 @@
+cp -r CompanyOld/main/migrations Company/main
+cp -r CompanyOld/user/migrations Company/user
+cp -r CompanyOld/projects/migrations Company/projects
+cp -r CompanyOld/teammates/migrations Company/teammates
+cp -r CompanyOld/db.sqlite3 Company
+cp -r CompanyOld/media Company
+
+

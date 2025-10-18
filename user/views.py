@@ -58,7 +58,7 @@ class RegisterView(View):
 		username = request.POST.get("username")
 		password = request.POST.get("password")
 		password2 = request.POST.get("password2")
-		User.objects.all().delete()
+		
 		if password != password2:
 			return render(request, "user/register.html", {"error": "password not match"})
 		
