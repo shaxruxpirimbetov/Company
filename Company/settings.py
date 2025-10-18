@@ -28,7 +28,7 @@ SECRET_KEY = "django-insecure-0b!dfj1--kbejf*^42dm&hl!ovsmva#m&4$q=er42eh)81zakz
 DEBUG = True
 
 ALLOWED_HOSTS = ["shaxrux.pythonanywhere.com"]
-# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 CORS_ALLOW_ALL_ORIGINS=False
 X_FRAME_OPTIONS = 'ALLOWALL'
 AUTH_USER_MODEL = "user.User"
@@ -130,10 +130,10 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 MEDIA_URL = "/media/"
-# MEDIA_ROOT = "/data/data/com.termux/files/home/media/"
 STATIC_ROOT = os.path.join(BASE_DIR / "staticfiles")
 MEDIA_ROOT = os.path.join(BASE_DIR / "media")
 STATICFILES_DIRS = [os.path.join(BASE_DIR / "static")]
+MEDIA_ROOT = "/data/data/com.termux/files/home/media/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

@@ -24,3 +24,17 @@
     height: 10em;
     border-radius: 1em;
 }
+
+.order-too {
+    background: var(--first-color);
+    padding: 1em;
+    width: 90%;
+    margin: auto;
+    border-radius: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.order-too:active {
+    background: grey;
+}

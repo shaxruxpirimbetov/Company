@@ -12,5 +12,4 @@ choices = [
 
 class User(AbstractUser):
 	role = models.CharField(max_length=24, choices=choices, default="other")
-
-
+	

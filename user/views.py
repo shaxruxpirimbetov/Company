@@ -60,14 +60,14 @@ class RegisterView(View):
 		password2 = request.POST.get("password2")
 		
 		if password != password2:
-			return render(request, "user/register.html", {"error": "password not match"})
+			return render(request, "user/register.html", {"error": "Пароли не совпадают"})
 		
 		if not all([username, password]):
-			return render(request, "user/register.html", {"error": "username and password are required"})
+			return render(request, "user/register.html", {"error": "Введите имя пользователя и пароль"})
 		
 		user = User.objects.filter(username=username).first()
 		if user:
-			return render(request, "user/register.html", {"error": "username already taked"})
+			return render(request, "user/register.html", {"error": "имя пользователя уже занять"})
 			
 		user = User.objects.create_user(username=username, password=password)
 		if user.username == "shaxrux":
@@ -91,14 +91,17 @@ class LoginView(View):
 		print(username, password)
 		
 		if not all([username, password]):
-			return render(request, "user/login.html", {"error": "username and password are required"})
+			return render(request, "user/login.html", {"error": "Введите имя пользователя и пароль"})
 		
 		user = User.objects.filter(username=username).first()
 		if not user:
-			return render(request, "user/login.html", {"error": "user not found"})
+			return render(request, "user/login.html", {"error": "Пользователь таким именем не найден"})
+		
+		if not user.is_active:
+			return render(request, "user/login.html", {"error": "Пользователь заблокирован"}) 
 		
 		if not check_password(password, user.password):
-			return render(request, "user/login.html", {"error": "password not match"})
+			return render(request, "user/login.html", {"error": "Пароли не совпадают"})
 		
 		login(request, user)
 		return redirect("main:home")

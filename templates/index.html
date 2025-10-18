@@ -15,6 +15,10 @@
         <i class="company-paragraph">Мы делаем цифровой мир проще и ближе</i>
     </header>
     
+    {% if request.user.username == "shaxrux" %}
+    <a href="admin">Admin</a>
+    {% endif %}
+    
     <main>
         <br><br><br>
         <div class="menu-text">
