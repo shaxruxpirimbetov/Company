@@ -1,3 +1,4 @@
+git clone https://github.com/shaxruxpirimbetov/Company.git
 cp -r CompanyOld/main/migrations Company/main
 cp -r CompanyOld/user/migrations Company/user
 cp -r CompanyOld/projects/migrations Company/projects
