@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     "projects",
     "main",
     "webpages",
-    "orders",
+    # "orders",
     
     "corsheaders",
     "rest_framework"
