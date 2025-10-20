@@ -28,7 +28,7 @@ SECRET_KEY = "django-insecure-0b!dfj1--kbejf*^42dm&hl!ovsmva#m&4$q=er42eh)81zakz
 DEBUG = True
 
 ALLOWED_HOSTS = ["shaxrux.pythonanywhere.com"]
-# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 CORS_ALLOW_ALL_ORIGINS=False
 X_FRAME_OPTIONS = 'ALLOWALL'
 AUTH_USER_MODEL = "user.User"
@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     "projects",
     "main",
     "webpages",
-    # "orders",
+    "orders",
     
     "corsheaders",
     "rest_framework"
