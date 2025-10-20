@@ -26,6 +26,7 @@ urlpatterns = [
     path("teammate/", include("teammates.urls")),
     path("projects/", include("projects.urls")),
     path("webpages/", include("webpages.urls")),
+    path("orders/", include("orders.urls")),
     
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),

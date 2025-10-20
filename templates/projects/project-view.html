@@ -21,15 +21,15 @@
         
         <div class="project-images-list">
             {% for image in project.images %}
-                <img src="{{ image.image }}" alt="" class="">
+                <img src="{{ image.image }}" onclick="location.assign({{ image.image }})">
             {% endfor %}
         </div>
         
-        <i class="project-description"> {{ project.description }} </i>
+        <p class="project-description">{{ project.description }}</p>
         
     </main>
     
-    <div class="order-too">Заказать также</div>
+    <div class="order-too" onclick="location.assign('/orders/create/')">Заказать также</div>
     
     <footer>
         <p class="text"> © 2025 Company. Все права защищены.  

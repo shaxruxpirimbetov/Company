@@ -18,4 +18,5 @@ class ProjectView(View):
 		if not project:
 			return render(request, "projects/project-404.html")
 		project = ProjectSerializer(project).data
+		project["description"].replace("\n", "<br>")
 		return render(request, "projects/project-view.html", {"project": project})

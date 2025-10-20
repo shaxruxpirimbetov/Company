@@ -33,3 +33,9 @@
 .empty-image {
     margin: auto;
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

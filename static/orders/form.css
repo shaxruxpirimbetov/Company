@@ -1,0 +1,67 @@
+.company-title {
+    font-size: 3em;
+    font-weight: 650;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title {
+    font-size: 1.5em;
+    font-weight: 650;
+    margin-bottom: 1em;
+}
+
+form .error-text { color: red; }
+
+form .input-box {
+    border-bottom: 2px solid white;
+    display: flex;
+    align-items: center;
+    margin: 1em 0;
+    gap: .25em;
+    padding: .25em;
+    width: 100%;
+}
+
+form .input-box input,
+form .input-box textarea {
+    background: none;
+    border: none;
+    color: white;
+    width: 100%;
+}
+form .input-box input,
+form .input-box textarea,
+form .input-box i { font-size: 1.15em; }
+
+form .input-box input:focus,
+form .input-box textarea:focus { 
+    animation: 1s changeColor infinite;
+}
+
+#submit {
+    margin-top: 1em;
+    background: var(--first-color);
+    font-size: 1.25em;
+    text-align: center;
+    font-weight: 650;
+    padding: .65em;
+    color: white;
+    border: 2px solid var(--first-color);
+}
+
+#submit:active {
+    background: white;
+    color: black;
+}
+
+form .link { color: grey; }
+form .link:active { color: darkgrey; }
+
+@keyframes changeColor {
+    0%, 100% { color: grey; }
+    50% { color: white; }
+}

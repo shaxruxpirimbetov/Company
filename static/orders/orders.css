@@ -1,0 +1,53 @@
+.order-view-header {
+    line-height: .85em;
+    margin-top: .5em;
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.order {
+    border: 1px solid grey;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    justify-content: space-between;
+    border-radius: .25em;
+}
+
+.order .title {
+    font-size: 1.25em;
+    font-weight: 650;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.order .status {
+    background: var(--first-color);
+    padding: .25em;
+    border-radius: .5em;
+}
+
+.view-description {
+    background: var(--first-color);
+    padding: .5em;
+    border-radius: .5em;
+    box-shadow: 0 .25em .5em #1c1c1c;
+}
+
+.view-status {
+    font-size: 2.5em;
+    margin: 1em auto;
+    text-align: center;
+    filter: drop-shadow(0 0 .5em white);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,44 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'orders/orders.css' %}">
+</head>
+<body>
+
+    <header>
+        <div class="company-title">Company</div>
+        <i class="company-paragraph">Мы делаем цифровой мир проще и ближе</i>
+    </header>
+
+    <main>
+        
+        <div class="orders-list">
+        {% for order in orders %}
+            <div class="order" onclick="location.assign('/orders?order_id={{ order.id }}')">
+                <div class="title">{{ order.title }}</div>
+                <div class="status">{{ order.status }}</div>
+            </div>
+        {% endfor %}
+        </div>
+        
+<br>
+<br>
+<br>
+<br>
+<br>
+    
+    </main>
+
+    <footer>
+        <p class="text"> © 2025 Company. Все права защищены.  
+Связаться: info@company.com | Telegram: @company_support  
+Сделано с заботой о каждом проекте ❤️</p>
+    </footer>
+
+</body>
+</html>
