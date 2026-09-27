@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-0b!dfj1--kbejf*^42dm&hl!ovsmva#m&4$q=er42eh)81zakz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["shaxrux.pythonanywhere.com"]
+ALLOWED_HOSTS = ["qit-company.vercel.app"]
 ALLOWED_HOSTS = []
 CORS_ALLOW_ALL_ORIGINS=False
 X_FRAME_OPTIONS = 'ALLOWALL'
