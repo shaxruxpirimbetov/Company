@@ -28,7 +28,6 @@ SECRET_KEY = "django-insecure-0b!dfj1--kbejf*^42dm&hl!ovsmva#m&4$q=er42eh)81zakz
 DEBUG = True
 
 ALLOWED_HOSTS = ["qit-company.vercel.app"]
-ALLOWED_HOSTS = []
 CORS_ALLOW_ALL_ORIGINS=False
 X_FRAME_OPTIONS = 'ALLOWALL'
 AUTH_USER_MODEL = "user.User"
